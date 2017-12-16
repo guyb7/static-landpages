@@ -1,0 +1,14 @@
+[Unit]
+Description=Static Landpages
+After=network.target
+
+[Service]
+ExecStart=/var/www/static-landpages/index.js
+Restart=always
+User=ubuntu
+Group=ubuntu
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/var/www/static-landpages
+
+[Install]
+WantedBy=multi-user.target
