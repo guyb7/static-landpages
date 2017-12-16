@@ -7,7 +7,9 @@ const path = require('path')
 
 const express = require('express')
 const app = express()
+
 app.set('trust proxy', 1)
+app.use(express.static('shared'))
 
 const sites = new Set(fs.readdirSync(path.join(__dirname, 'sites')))
 app.use((req, res, next) => {

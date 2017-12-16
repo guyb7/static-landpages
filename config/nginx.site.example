@@ -1,0 +1,46 @@
+# sudo vim /etc/nginx/sites-available/your-site
+# sudo ln /etc/nginx/sites-available/your-site /etc/nginx/sites-enabled/your-site
+# sudo letsencrypt certonly -a webroot --webroot-path=/var/www/letsencrypt -d yoursite.com -d www.yoursite.com
+# Uncomment SSL sections
+
+# Your Site
+
+#server {
+#    # SSL
+#    ssl_certificate     /etc/letsencrypt/live/yoursite.com/fullchain.pem;
+#    ssl_certificate_key /etc/letsencrypt/live/yoursite.com/privkey.pem;
+#    include             snippets/ssl-params.conf;
+#    listen              443 ssl http2;
+#    listen              [::]:443 ssl http2;
+#
+#    server_name yoursite.com;
+#    location / {
+#        proxy_pass                       http://127.0.0.1:3550;
+#        proxy_set_header Host            $host;
+#        proxy_set_header X-Forwarded-For $remote_addr;
+#    }
+#}
+
+#server {
+#    # SSL
+#    ssl_certificate     /etc/letsencrypt/live/yoursite.com/fullchain.pem;
+#    ssl_certificate_key /etc/letsencrypt/live/yoursite.com/privkey.pem;
+#    include             snippets/ssl-params.conf;
+#    listen              443 ssl http2;
+#    listen              [::]:443 ssl http2;
+#    server_name www.yoursite.com;
+#    return 301 https://yoursite.com;
+#}
+
+server {
+    listen        80;
+    include       /etc/nginx/snippets/letsencrypt-acme-challenge.conf;
+    server_name   yoursite.com www.yoursite.com;
+    root /var/www/static-landpages/sites/yoursite.com/static;
+    location / {
+        try_files $uri $uri/ @redirect;
+    }
+    location @redirect {
+        return 301    https://yoursite.com$request_uri;
+    }
+}
