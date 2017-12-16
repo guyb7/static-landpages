@@ -4,7 +4,11 @@ Serves static HTML pages for multiple domains.
 
 ## Install
 * `yarn install`
-* create `config/config.env`
+* create `config/config.env`:
+```
+NODE_ENV=development
+PORT=3550
+```
 
 ## Service
 * `sudo chmod +x ./index.js`
@@ -18,7 +22,7 @@ git checkout .
 git clean -f -d
 git pull
 yarn install
-chmod +x static-landpages.js
+chmod +x index.js
 sudo systemctl restart static-landpages
 ```
 

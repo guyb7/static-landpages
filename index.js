@@ -7,11 +7,14 @@ const path = require('path')
 
 const express = require('express')
 const app = express()
+app.set('trust proxy', 1)
 
 const sites = new Set(fs.readdirSync(path.join(__dirname, 'sites')))
 app.use((req, res, next) => {
-  if (req.hostname === 'localhost' || req.hostname === '127.0.0.1') {
+  if (process.env.NODE_ENV === 'development') {
     req.site = req.query.site
+  } else {
+    req.site = req.headers.host
   }
   if (sites.has(req.site)) {
     express.static(path.join(__dirname, 'sites', req.site))(req, res, next)
