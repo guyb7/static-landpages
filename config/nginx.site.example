@@ -1,5 +1,6 @@
 # sudo vim /etc/nginx/sites-available/your-site
 # sudo ln /etc/nginx/sites-available/your-site /etc/nginx/sites-enabled/your-site
+# sudo systemctl restart nginx
 # sudo letsencrypt certonly -a webroot --webroot-path=/var/www/letsencrypt -d yoursite.com -d www.yoursite.com
 # Uncomment SSL sections
 

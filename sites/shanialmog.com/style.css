@@ -1,53 +1,53 @@
-body{
+body {
 /*margin: 0 auto;
 width: 980px;*/
 margin: 0;
 font-family: lato,sans-serif;
 }
 
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
 
-.active{
+.active {
   border-bottom: 1px solid #f3f3ff;
 }
 
-a{
+a {
   text-decoration: none;
   letter-spacing: 0.7px;
 }
 
-header{
+header {
   background: linear-gradient(-180deg, #c47290 3%, #feada6 100%);
 }
 
-.container{
+.container {
   max-width: 960px;
   margin: 0 auto;
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px 40px 60px 40px;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
 }
 
- nav a{
+ nav a {
   margin: 0 0 10px 20px;
-  padding: 15px 5px 5px 5px;
+  padding: 15px 1px 5px 1px;
   font-size: 11px;
   color: #f3f3ff;
 }
 
-.leftCon{
+.leftCon {
   display: flex;
   flex-direction: row;;
   align-items: flex-start;
@@ -55,7 +55,7 @@ nav{
   justify-content: space-between;
 }
 
-.myName{
+.myName {
   padding: 4px 5px 5px 5px;
   font-weight: 600;
   font-size: 14px;
@@ -63,50 +63,83 @@ nav{
   border-bottom: 1px solid #feada6;
 }
 
-.title{
+.title {
   padding: 8px 5px 50px 5px;
   font-weight: lighter;
   font-size: 17px;
   letter-spacing: 0.5px;
 }
 
-.contactBtn{
-  border: 1px solid #ffff;
-  padding: 5px 20px;
-  font-size: 11px;
-  margin-bottom: 20px;
-  color: #ffff;
-  border-radius: 3px;
-}
-
-.logoTextCon{
+.logoTextCon {
   padding: 16px 0 0 0;
   text-align: center;
   color: #ffff;
 }
 
-.shaniImg{
+.shaniImg {
   padding-left: 15px;
 }
 
-.aboutMeWrap{
-  padding: 110px 15px 15px 15px;
+.aboutMeWrap {
+  padding: 90px 15px 40px 15px;
 }
 
-.aboutMeTitle{
+.aboutMeTitle {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 15px;
 }
 
-.line{
+/*.line {
   height: 20px;
   width: 130px;
   border-bottom: 1px solid #000000;
-  margin-bottom: 30px;
+}
+*/
+
+.seperator {
+  margin-top: 100px;
+  border-bottom: 1px;
+  border-color: #f3d3;
 }
 
-.aboutMeTitle h1{
+.projectCont {
+  padding: 0 0 0 100px;
+}
+
+.projectItem {
+  padding: 0 0 50px 0;
+}
+
+.projectTitle {
+  font-size: 14px;
+}
+
+dl {
+  margin-bottom: 10px;
+}
+
+.projectDesc dt {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.projectDesc dd {
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 5px 0 10px 0;
+}
+
+.showMoreBtn {
+  font-size: 11px;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 5px 10px;
+}
+
+.aboutMeTitle h1 {
   display: inline-block;
   padding: 0 15px;
   background-color: #ffff;
@@ -115,46 +148,45 @@ nav{
   letter-spacing: 0.7px;
 }
 
-P{
+p {
   margin: 0 50px 0 50px;
   padding: 10px 0 180px 0;
   letter-spacing: 1.2px;
   line-height: 30px;
   font-size: 17px;
   font-weight: lighter;
-  border-bottom: 1px solid #f3d3;
 }
 
-.contact, .email, .phone{
+.contact, .email, .phone {
   display: flex;
   font-weight: normal;
   font-size: 13px;
 }
 
-.contact{
+.contact {
   padding: 30px 0 300px 0;
 }
 
-.contactInfo{
+.contactInfo {
   padding-left: 100px;
 }
 
-.email, .phone{
+.email, .phone {
   width: 230px;
   justify-content: space-between;
   align-items: baseline;
 
 }
 
-.email{
+.email {
   padding-bottom: 20px;
 }
 
-.contact a{
+.contact a {
   font-size: 12px;
   font-weight: 400;
 }
 
-.contactTitle{
+.contactTitle {
   padding: 0 50px;
 }
